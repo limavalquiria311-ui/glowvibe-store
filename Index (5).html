@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glow Vibe Store | Produtos de Casa</title>
+  <meta name="description" content="Glow Vibe Store — vitrine moderna de produtos para casa. Clique e compre na Shopee." />
+
+  <!-- =========================
+       TIKTOK PIXEL (COLE AQUI)
+       Cole aqui o código do seu TikTok Pixel.
+       ========================= -->
+  <!--
+  <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject = t;
+      var ttq = w[t] = w[t] || [];
+      ttq.methods = ["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"];
+      ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } };
+      for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
+      ttq.instance = function (t) { for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) ttq.setAndDefer(e, ttq.methods[n]); return e };
+      ttq.load = function (e, n) {
+        var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
+        ttq._i = ttq._i || {};
+        ttq._i[e] = [];
+        ttq._i[e]._u = i;
+        ttq._t = ttq._t || {};
+        ttq._t[e] = +new Date;
+        ttq._o = ttq._o || {};
+        ttq._o[e] = n || {};
+        var o = document.createElement("script");
+        o.type = "text/javascript";
+        o.async = !0;
+        o.src = i + "?sdkid=" + e + "&lib=" + t;
+        var a = document.getElementsByTagName("script")[0];
+        a.parentNode.insertBefore(o, a)
+      };
+      ttq.load('SEU_PIXEL_ID_AQUI');
+      ttq.page();
+    }(window, document, 'ttq');
+  </script>
+  -->
+
+  <style>
+    :root{
+      --bg:#0b0b10;
+      --card:#12121a;
+      --text:#f5f5f7;
+      --muted:#b9b9c6;
+      --line:rgba(255,255,255,.10);
+      --btn:#ffffff;
+      --btnText:#0b0b10;
+      --chip:rgba(255,255,255,.08);
+      --shadow: 0 12px 35px rgba(0,0,0,.35);
+      --radius: 22px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(255,255,255,.08), transparent 60%),
+                  radial-gradient(900px 600px at 90% 20%, rgba(255,255,255,.06), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:inherit}
+    .container{max-width:1100px;margin:0 auto;padding:18px}
+    header{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(14px);
+      background: rgba(11,11,16,.72);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px;
+      padding:14px 18px;
+      max-width:1100px; margin:0 auto;
+    }
+    .brand{
+      display:flex; flex-direction:column; line-height:1.05;
+    }
+    .brand h1{margin:0;font-size:18px;letter-spacing:.4px}
+    .brand span{font-size:12px;color:var(--muted)}
+    .badge{
+      font-size:12px; padding:8px 12px; border-radius:999px;
+      background:var(--chip); border:1px solid var(--line);
+      white-space:nowrap;
+    }
+
+    .hero{
+      padding:22px 0 10px;
+    }
+    .hero h2{
+      margin:0 0 10px;
+      font-size:26px;
+      letter-spacing:.2px;
+    }
+    .hero p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.4;
+    }
+
+    .grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr)); /* celular = 2 colunas */
+      gap:14px;
+    }
+    @media (min-width: 900px){
+      .grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); } /* PC = 3 colunas */
+      .brand h1{font-size:20px}
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:14px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+      min-height: 180px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:10px;
+    }
+
+    .card .title{
+      font-size:14px;
+      font-weight:700;
+      margin:0;
+    }
+    .card .price{
+      margin:0;
+      color: var(--text);
+      font-size:18px;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+    .card .note{
+      margin:0;
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .btn{
+      width:100%;
+      display:flex; align-items:center; justify-content:center;
+      gap:8px;
+      padding:12px 12px;
+      border-radius: 16px;
+      border: 0;
+      cursor:pointer;
+      background: var(--btn);
+      color: var(--btnText);
+      font-weight:800;
+      font-size:14px;
+      transition: transform .08s ease;
+    }
+    .btn:active{transform:scale(.98)}
+    .footer{
+      padding:26px 0 40px;
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
+    }
+    .tiny{
+      opacity:.8;
+      margin-top:6px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="topbar">
+      <div class="brand">
+        <h1>Glow Vibe Store</h1>
+        <span>Vitrine moderna • Produtos para casa</span>
+      </div>
+      <div class="badge">🛒 Compra segura na Shopee</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Achadinhos para sua casa ✨</h2>
+      <p>
+        Clique em <b>Comprar na Shopee</b> para ver o produto e finalizar por lá.
+        (Ideal para links de afiliado e anúncios no TikTok.)
+      </p>
+    </section>
+
+    <section class="grid" id="gridProdutos"></section>
+
+    <div class="footer">
+      Glow Vibe Store • Afiliados Shopee
+      <div class="tiny">Dica: teste anúncios com objetivo de cliques e rastreie pelo TikTok Pixel.</div>
+    </div>
+  </main>
+
+  <script>
+    // ==========================
+    // LISTA DE PRODUTOS
+    // Para adicionar mais produtos: copie um bloco e cole abaixo
+    // ==========================
+    const produtos = [
+      { nome: "Produto Casa 01", preco: "R$ 79,90", link: "https://s.shopee.com.br/4fqNL4Cr9y" },
+      { nome: "Produto Casa 02", preco: "R$ 69,90", link: "https://s.shopee.com.br/30i9M8klfC" },
+      { nome: "Produto Casa 03", preco: "R$ 89,90", link: "https://s.shopee.com.br/4LDWx1HaOB" },
+      { nome: "Produto Casa 04", preco: "R$ 59,90", link: "https://s.shopee.com.br/1LZvNgBE6w" },
+      { nome: "Produto Casa 05", preco: "R$ 99,90", link: "https://s.shopee.com.br/1BGVBXCI4w" },
+      { nome: "Produto Casa 06", preco: "R$ 49,90", link: "https://s.shopee.com.br/806pKFvMpy" },
+    ];
+
+    function abrirShopee(produto){
+      // Evento de clique para TikTok Pixel (quando estiver instalado)
+      if (window.ttq) {
+        try {
+          ttq.track('ClickButton', {
+            content_name: produto.nome,
+            value: produto.preco,
+            currency: 'BRL'
+          });
+        } catch (e) {}
+      }
+      window.open(produto.link, "_blank");
+    }
+
+    const grid = document.getElementById("gridProdutos");
+
+    produtos.forEach((p) => {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      card.innerHTML = `
+        <div>
+          <p class="title">${p.nome}</p>
+          <p class="price">${p.preco}</p>
+          <p class="note">Clique para comprar na Shopee</p>
+        </div>
+        <button class="btn" type="button">Comprar na Shopee →</button>
+      `;
+
+      card.querySelector("button").addEventListener("click", () => abrirShopee(p));
+      grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>
